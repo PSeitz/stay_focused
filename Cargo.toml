@@ -1,0 +1,15 @@
+[package]
+name = "tobii-rust"
+version = "0.1.0"
+authors = ["Pascal Seitz <pascal.seitz@gmail.com>"]
+edition = "2018"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["winuser", "psapi", "dwmapi", "sysinfoapi"] }
+
+[build-dependencies]
+bindgen = "0.42.2"
+
+[dependencies]
+widestring = "0.4.0"
+num = "0.2.0"
